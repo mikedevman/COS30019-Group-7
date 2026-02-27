@@ -131,7 +131,7 @@ def main():
 
     # 4. Standard Output Formatting [cite: 98-101]
     if goal is not None:
-        path_str = "-".join(map(str, path))
+        path_str = " ".join(map(str, path))
         print(f"{filename} {method}")
         print(f"{goal} {nodes_created}")
         print(path_str)

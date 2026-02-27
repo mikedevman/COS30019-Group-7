@@ -1,0 +1,26 @@
+# Test Cases
+
+**Test Case 0:** Provided in the assignment requirement. Origin: 2, Destination: 5, 4.
+
+**Test Case 1:** A straight linear chain of 5 nodes. Origin: 1, Destination: 5.
+
+**Test Case 2:** A single node graph with no edges. Origin: 1, Destination: 1.
+
+**Test Case 3:** Two disconnected components — no path exists. Origin: 1, Destination: 4.
+
+**Test Case 4:** The origin node is also the destination. Origin: 1, Destination: 1.
+
+**Test Case 5:** Two destinations equidistant from the origin on separate branches. Origin: 1, Destinations: 4, 5.
+
+**Test Case 6:** A directed graph where no valid path exists to the destination. Origin: 1, Destination: 3.
+
+**Test Case 7:** A costly direct path exists but a cheaper multi-hop path is available. Origin: 1, Destination: 4.
+
+**Test Case 8:** The graph contains a cycle. Tests that algorithms don't loop infinitely. Origin: 1, Destination: 5.
+
+**Test Case 9:** A 3x5 grid of 15 nodes with uniform edge costs. Origin: 1, Destination: 15.
+
+**Test Case 10:** Two equal-cost paths to the same destination. Tests tie-breaking by node number. Origin: 1, Destination: 4.
+
+
+

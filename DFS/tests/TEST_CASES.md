@@ -4,7 +4,7 @@
 
 **Test Case 1:** A straight linear chain of 5 nodes. Origin: 1, Destination: 5.
 
-**Test Case 2:** A single node graph with no edges. Origin: 1, Destination: 1.
+**Test Case 2:** A single-node graph with no edges. Origin: 1, Destination: 1.
 
 **Test Case 3:** Two disconnected components — no path exists. Origin: 1, Destination: 4.
 

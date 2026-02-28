@@ -10,7 +10,7 @@
 
 **Test Case 4:** The origin node is also the destination. Origin: 1, Destination: 1.
 
-**Test Case 5:** Two destinations equidistant from the origin on separate branches. Origin: 1, Destinations: 4, 5.
+**Test Case 5:** Two destinations reachable from the origin on separate branches. Origin: 1, Destinations: 4, 5.
 
 **Test Case 6:** A directed graph where the destination is reachable via an intermediate node. Origin: 1, Destination: 3.
 

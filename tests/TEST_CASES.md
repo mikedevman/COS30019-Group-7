@@ -14,11 +14,11 @@
 
 **Test Case 6:** A directed graph where the destination is reachable via an intermediate node. Origin: 1, Destination: 3.
 
-**Test Case 7:** A costly direct path exists but a cheaper multi-hop path is available. Origin: 1, Destination: 4.
+**Test Case 7:** A graph where multiple paths exist to the destination but with different costs. Origin: 1, Destination: 4.
 
 **Test Case 8:** The graph contains a cycle. Tests that algorithms don't loop infinitely. Origin: 1, Destination: 5.
 
-**Test Case 9:** A 3x5 grid of 15 nodes with uniform edge costs. Origin: 1, Destination: 15.
+**Test Case 9:** A large grid graph of 15 nodes used to compare node expansion counts across algorithms. Origin: 1, Destination: 15.
 
 **Test Case 10:** Two equal-cost paths to the same destination. Tests tie-breaking by node number. Origin: 1, Destination: 4.
 

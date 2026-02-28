@@ -7,6 +7,22 @@ from astar import astar
 from ucs import ucs
 from weightedastar import weighted_astar
 
+def abbrevation(method):
+    if method == "DFS":
+        return "Depth-First Search"
+    elif method == "BFS":
+        return "Breadth-First Search"
+    elif method == "GBFS":
+        return "Greedy Best-First Search"
+    elif method == "AS":
+        return "A*"
+    elif method == "CUS1":
+        return "Uniform Cost Search"
+    elif method == "CUS2":
+        return "Weighted A*"
+    else:
+        return method
+
 def main():
     filename = sys.argv[1]
     method = sys.argv[2].upper()
@@ -35,7 +51,7 @@ def main():
         exit()
 
     if number_of_nodes and path is not None and len(path) > 0:
-        print(f"Filename: {filename}, Method: {method}")
+        print(f"Filename: {filename}, Method: {method} ({abbrevation(method)})")
         print(f"Goal: {path[-1]}, Number of nodes expanded: {number_of_nodes}") # [-1] to get the last element of the path 
         print(f"Path: {' -> '.join(map(str, path))}")
     else:

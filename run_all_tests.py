@@ -36,8 +36,14 @@ def run_all_tests(method):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Search methods: DFS, BFS, GBFS, AS, CUS1 (UCS), CUS2 (Weighted AS)")
-        method = input("Enter search method: ")
+        print(colored("\nSearch methods:", "yellow"))
+        print("DFS (Depth-First Search)")
+        print("BFS (Breadth-First Search)")
+        print("GBFS (Greedy Best-First Search)")
+        print("AS (A*)")
+        print("CUS1 (Uniform Cost Search)")
+        print("CUS2 (Weighted A*)")
+        method = input("\nEnter search method: ")
     else:
         method = sys.argv[1]
     run_all_tests(method)

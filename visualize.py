@@ -28,7 +28,7 @@ def _draw_edge(ax, x1, y1, x2, y2, color, lw, directed):
         ax.plot([x1, x2], [y1, y2], color=color, lw=lw, zorder=1)
 
 # main visualization function
-def launch(nodes, edges, origin, destinations, final_path, expanded_order):
+def launch(nodes, edges, origin, destinations, final_path, expanded_order, test_case_number=None, method=None):
     dest_set   = set(destinations)
     path_set   = set(final_path) if final_path else set()
     path_edges = set(zip(final_path, final_path[1:])) if final_path else set()
@@ -43,7 +43,16 @@ def launch(nodes, edges, origin, destinations, final_path, expanded_order):
     fig, ax = plt.subplots(figsize=(7, 6))
     fig.patch.set_facecolor("#f5f5f5")
     ax.set_facecolor("white")
-    ax.set_title("Graph Visualizer", fontsize=12, fontweight="bold", pad=10)
+    # set title and window name
+    if test_case_number is not None and method is not None:
+        title_str = f"Test Case {test_case_number} - {method}"
+        ax.set_title(title_str, fontsize=12, fontweight="bold", pad=10)
+        try:
+            fig.canvas.manager.set_window_title(title_str)
+        except Exception:
+            pass
+    else:
+        ax.set_title("Graph Visualizer", fontsize=12, fontweight="bold", pad=10)
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
     ax.grid(True, color="#e0e0e0", linewidth=0.8)

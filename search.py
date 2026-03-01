@@ -60,7 +60,14 @@ def main():
 
     if visualize:
         from visualize import launch
-        launch(nodes, edges, origin, destinations, path or [], expanded)
+        import re, os
+        base_filename = os.path.basename(filename)
+        if base_filename == "PathFinder-test.txt":
+            test_case_number = 0
+        else:
+            match = re.search(r"PathFinder-test-(\d+)\.txt", base_filename)
+            test_case_number = int(match.group(1)) if match else filename
+        launch(nodes, edges, origin, destinations, path or [], expanded, test_case_number=test_case_number, method=method)
 
 if __name__ == "__main__":
     main()
